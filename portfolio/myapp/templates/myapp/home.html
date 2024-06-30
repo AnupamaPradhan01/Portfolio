@@ -1,4 +1,38 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block content %}
-<h3>New content </h3>
+{% comment %} start of parent area {% endcomment %}
+<div>
+    {% comment %} start profile image area {% endcomment %}
+    <div class="text-center mt-5">
+        <img src="{% static 'myapp/images/propic.png' %}" alt="profilepic"
+         width="250px" height="130px" class="img-thumbnail">
+    </div>
+    {% comment %} end of profile image {% endcomment %}
+    {% comment %} start of profile info {% endcomment %}
+    <div class="text-white mt-5 mx-5 text-justify">
+        <h1 class="font-bold-weight">Hello,</h1>
+        <div class="px-4" style="line-height:1.5rem;">
+            <p style="text-indent:100px">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Repudiandae mollitia reprehenderit ipsam!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+               Hic doloribus omnis facere!lorem12</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+               Expedita, neque eos, 
+               doloribus laboriosam ab cum eum tenetur ducimus voluptatibus
+               doloremque nesciunt quisquam.</p> 
+        </div>
+           
+    </div>
+    {% comment %} end of profile info {% endcomment %}
+    {% comment %} start of btn  {% endcomment %}
+    <div class="text-center">
+        <a href="" class="btn btn-outline-warning my-3">Hire Me</a>
+        <a href="" class="btn btn-outline-primary my-3">Download CV</a>
+    </div>
+   
+    {% comment %} end of btn {% endcomment %}
+</div>
+{% comment %} end of parent area {% endcomment %}
+
 {% endblock content %}
