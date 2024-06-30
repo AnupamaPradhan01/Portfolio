@@ -4,3 +4,7 @@ from django.shortcuts import render
 def home(request):
     return render(request,"myapp/home.html")
 
+# skill page
+def skill(request):
+    return render(request,"myapp/skills.html")
+
