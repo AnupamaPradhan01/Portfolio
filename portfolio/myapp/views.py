@@ -8,3 +8,8 @@ def home(request):
 def skill(request):
     return render(request,"myapp/skills.html")
 
+# projects page
+def projects(request):
+    return render(request,"myapp/projects.html") 
+
+

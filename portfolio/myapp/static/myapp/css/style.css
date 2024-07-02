@@ -8,3 +8,6 @@ html,body{
 .container-fluid{
     min-height: 100%;
 }
+.jumbo-color{
+    background-color: rgb(83, 81, 81);
+}
