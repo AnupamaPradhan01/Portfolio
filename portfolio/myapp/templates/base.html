@@ -7,7 +7,9 @@
     <title>{% block title %}{% endblock title %}</title>
     {% comment %} start of css file {% endcomment %}
     <link rel="stylesheet" href="{% static 'myapp/css/bootstrap.css' %}">
-    <link rel="stylesheet" href="{% static 'myapp/css/style.css' %}">
+    {% block basecss %}
+     <link rel="stylesheet" type="text/css" href="{% static 'myapp/css/style.css' %}">
+    {% endblock basecss%}
     {% comment %} end of css file {% endcomment %}
 </head>
 <body>

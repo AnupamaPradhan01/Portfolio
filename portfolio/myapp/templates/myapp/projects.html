@@ -18,6 +18,9 @@
    <a href="{{project.git_link}}" class="btn btn-outline-warning">View Github</a>
    {% endfor %}
    {% comment %} projects list ends {% endcomment %}
+   {% comment %} include pagination start {% endcomment %}
+   {% include "myapp/pagination.html" with page=projects %}
+   {% comment %} end of pagination {% endcomment %}
 </div>
 {% comment %} end parent {% endcomment %}
 
