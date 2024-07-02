@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import Project
 
 # home page.
 def home(request):
@@ -10,6 +11,7 @@ def skill(request):
 
 # projects page
 def projects(request):
-    return render(request,"myapp/projects.html") 
+    projects=Project.published.all()
+    return render(request,"myapp/projects.html",{'projects':projects}) 
 
 

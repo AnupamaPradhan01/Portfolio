@@ -5,14 +5,19 @@
     {% comment %} start heading {% endcomment %}
       <h1 class="text-warning mb-5 border-bottom">PROJECTS</h1>
     {% comment %} end heading {% endcomment %}
-    <div class="jumbotron jumbotron-fluid jumbo-color">
-      <div class="container">
-        <h1 class="display-4">Fluid jumbotron</h1>
-        <p class="lead">This is a modified jumbotron that occupies the entire horizontal 
-          space of its parent.</p>
-          <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-      </div>
-    </div>
+   {% comment %} projects list start {% endcomment %}
+   {% for project in projects %}
+   <h2 class="text-white">
+    <a href="">{{project.title}}</a>
+   </h2>
+   <p class="date">
+    Published {{project.publish}}
+   </p>
+   {{project.body|truncatewords:30|linebreaks}}
+   <a href="{{project.netlify_link}}" class="btn btn-outline-primary">View Demo</a>
+   <a href="{{project.git_link}}" class="btn btn-outline-warning">View Github</a>
+   {% endfor %}
+   {% comment %} projects list ends {% endcomment %}
 </div>
 {% comment %} end parent {% endcomment %}
 

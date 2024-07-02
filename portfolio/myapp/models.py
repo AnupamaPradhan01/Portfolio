@@ -1,5 +1,10 @@
 from django.db import models
 from django.utils import timezone
+# custom manager
+class PublishedManager(models.Manager):
+    def get_queryset(self):
+        return super().get_queryset()\
+                       .filter(status=Project.Status.PUBLISHED)
 # projects model.
 
 class Project(models.Model):
@@ -13,6 +18,11 @@ class Project(models.Model):
     netlify_link=models.CharField(max_length=1000,default="iklo")
     publish=models.DateTimeField(default=timezone.now)
     status=models.CharField(max_length=2,choices=Status.choices,default=Status.DRAFT)
+    
+    # default manager
+    objects=models.Manager()
+    # custom manager
+    published=PublishedManager()
     
     class Meta:
         ordering=['-publish']
