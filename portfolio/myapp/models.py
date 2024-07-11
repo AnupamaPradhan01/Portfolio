@@ -1,3 +1,4 @@
+from typing import Any
 from django.db import models
 from django.utils import timezone
 # custom manager
@@ -29,4 +30,10 @@ class Project(models.Model):
         indexes=[models.Index(fields=['-publish']),]
     
     def __str__(self):
-        return self.title    
+        return self.title   
+    
+#upload file 
+class UploadedFile(models.Model):
+    title=models.CharField(max_length=200,default="cv")
+    file=models.FileField(upload_to='uploads/')
+    uploaded_at=models.DateTimeField(auto_now_add=True)  

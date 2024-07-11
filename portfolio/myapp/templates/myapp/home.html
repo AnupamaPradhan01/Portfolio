@@ -28,7 +28,9 @@
     {% comment %} start of btn  {% endcomment %}
     <div class="text-center">
         <a href="" class="btn btn-outline-warning my-3">Hire Me</a>
-        <a href="" class="btn btn-outline-primary my-3">Download CV</a>
+        {% for file in files %}
+        <a href="{% url 'download_cv' file.id %}" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary my-3">Download CV</a> 
+        {% endfor %}
     </div>
    
     {% comment %} end of btn {% endcomment %}

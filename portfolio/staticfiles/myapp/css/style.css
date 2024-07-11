@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+html,body{
+    height: 100%;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+}
+.container-fluid{
+    min-height: 100%;
+}
+.jumbo-color{
+    background-color: rgb(83, 81, 81);
+}
+.st-font{
+    font-family: "Satisfy", cursive;
+    font-style: normal;
+}
+h2{
+    font-weight: normal;
+    margin: 30px 0;
+}
+a{
+    color: #00abff;
+    text-decoration: none;
+}
+p.date{
+    color: #ccc;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 12px;
+    font-style: italic;
+}
+/* pagination */
+.pagination{
+    margin:40px 0;
+    font-weight: 500;
+}
