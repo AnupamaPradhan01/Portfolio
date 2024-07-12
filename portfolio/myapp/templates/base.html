@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}{% endblock title %}</title>
     {% comment %} start of css file {% endcomment %}
+    <link rel="stylesheet" href="{% static 'myapp/css/all.min.css' %}">
     <link rel="stylesheet" href="{% static 'myapp/css/bootstrap.css' %}">
-    {% block basecss %}
-     <link rel="stylesheet" type="text/css" href="{% static 'myapp/css/style.css' %}">
-    {% endblock basecss%}
+    <link rel="stylesheet"  href="{% static 'myapp/css/style.css' %}">
+    
     {% comment %} end of css file {% endcomment %}
 </head>
 <body>
@@ -36,7 +36,7 @@
     <script src="{% static 'myapp/js/jquery.js' %}"></script>
     <script src="{% static 'myapp/js/popper.js' %}"></script>
     <script src="{% static 'myapp/js/style.js' %}"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
+    <script src="{% static 'myapp/js/all.min.js' %}"></script>
     {% comment %} end of js file  {% endcomment %}
 </body>
 </html>

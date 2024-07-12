@@ -37,3 +37,13 @@ class UploadedFile(models.Model):
     title=models.CharField(max_length=200,default="cv")
     file=models.FileField(upload_to='uploads/')
     uploaded_at=models.DateTimeField(auto_now_add=True)  
+    
+#contact me
+class contact(models.Model):
+    name=models.CharField(max_length=240)
+    y_email=models.EmailField(max_length=250) 
+    y_subject=models.CharField(max_length=200)
+    y_message=models.CharField(max_length=500)
+    
+    def __str__(self):
+        return self.name

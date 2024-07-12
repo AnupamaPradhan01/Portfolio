@@ -36,3 +36,11 @@ p.date{
     margin:40px 0;
     font-weight: 500;
 }
+/* nav link */
+a.nav-link{
+    color: whitesmoke;
+}
+a.nav-link:hover{
+    color: rgb(8, 8, 8);
+    background-color: #e9cd79;
+}

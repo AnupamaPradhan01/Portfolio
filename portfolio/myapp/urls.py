@@ -7,5 +7,6 @@ urlpatterns = [
     path("skills/",views.skill,name="skill"),
     path("projects/",views.projects,name="projects"),
     path('download_cv/<int:file_id>/',views.download_cv,name='download_cv'),
-    path('contact/',views.Contact,name='contact'),
+    path('contact/',views.Contactus,name='contact'),
+    path('success/', views.success, name='success'),
 ]

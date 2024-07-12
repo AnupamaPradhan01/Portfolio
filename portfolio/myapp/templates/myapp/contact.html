@@ -1,6 +1,39 @@
 {% extends 'base.html' %}
+{%load crispy_forms_tags %} 
 {% block content %}
 <div class="container mt-5">
     <h1 class="text-warning mb-5 border-bottom">CONTACT ME!!</h1>
+    <div class="row text-white mb-5">
+        <p class="mx-auto mb-5">
+            Do you have any questions? Please do not hesitate to contact. I will come back to you within 
+            a matter of hours to help you.
+        </p>
+        <form action="" method="POST">
+          {% csrf_token %}
+            
+             <div class="row">
+                    <div class="col-md-6">
+                      {{ form.name|as_crispy_field }}
+                    </div>
+                    <div class="col-md-6">
+                      {{ form.y_email|as_crispy_field }}
+                    </div>
+                </div>
+               
+                
+                {{ form.y_subject|as_crispy_field }}
+                {{ form.y_message|as_crispy_field }}
+               
+                <button class="btn btn-success" type="submit">Send</button>         
+               
+               
+        </form>
+                
 </div>
+{% comment %} social icons start {% endcomment %}
+<div class="text-center">
+    <a href="" target="_blank"><i class="fab fa-github  fa-2x mr-3"></i></a>
+    <a href="" target="_blank"><i class="fa-brands fa-linkedin  fa-2x mr-3"></i></a>
+</div>
+ {% comment %} social icons ends {% endcomment %}
 {% endblock content %}
