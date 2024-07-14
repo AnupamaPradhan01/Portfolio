@@ -7,6 +7,7 @@ class ProjectAdmin(admin.ModelAdmin):
     list_display=['title','slug','publish','status']
     date_hierarchy='publish'
     prepopulated_fields={'slug':('title',)}
+    
 
 @admin.register(UploadedFile)
 class uploadedAdmin(admin.ModelAdmin):
@@ -15,3 +16,5 @@ class uploadedAdmin(admin.ModelAdmin):
 @admin.register(contact)
 class uploadedAdmin(admin.ModelAdmin):
     list_display=['name','y_email','y_subject','y_message']    
+    
+   

@@ -1,4 +1,4 @@
-from django.shortcuts import render,redirect
+from django.shortcuts import render,redirect,get_object_or_404
 from django.http import HttpResponse,FileResponse,Http404
 from django.conf import settings
 from .models import Project,UploadedFile
@@ -26,6 +26,11 @@ def projects(request):
     page_number=request.GET.get('page',1)
     projects=paginator.page(page_number)
     return render(request,"myapp/projects.html",{'projects':projects}) 
+
+# project detail page
+def detail(request,id):
+    project=get_object_or_404(Project,id=id,status=Project.Status.PUBLISHED)
+    return render(request,"myapp/detail.html",{'project':project})
  
 
 def download_cv(request,file_id):

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+{% comment %} start parent  {% endcomment %}
+<div class="container mt-5">
+    {% comment %} start heading {% endcomment %}
+      <h1 class="text-warning mb-5 border-bottom">PROJECTS</h1>
+    {% comment %} end heading {% endcomment %}
+
+    {% comment %} start of body  {% endcomment %}
+    <h1>{{project.title}}</h1>
+    <p class="date">
+        Published:{{project.publish}}
+    </p>
+    {{project.body|linebreaks}}
+    {% comment %} end of body {% endcomment %}
+    
+  
+</div>
+{% comment %} end parent {% endcomment %}
+{% endblock content %}
