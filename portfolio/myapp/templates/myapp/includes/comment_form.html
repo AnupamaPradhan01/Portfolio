@@ -1,0 +1,40 @@
+{% load crispy_forms_tags %} 
+<h2>Add a new Comment</h2>
+<div class="row">
+    <div class="col-md-6">
+        <form action="{% url 'comment' project.id %}" method="POST">
+            {{form|crispy}}
+            {% csrf_token %}
+            <p><input type="submit" class="btn btn-success" value="Add Comment"></p>
+        </form>
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

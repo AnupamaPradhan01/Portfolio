@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Project,UploadedFile,contact
+from .models import Project,UploadedFile,contact,Comment
 
 # project model.
 @admin.register(Project)
@@ -17,4 +17,7 @@ class uploadedAdmin(admin.ModelAdmin):
 class uploadedAdmin(admin.ModelAdmin):
     list_display=['name','y_email','y_subject','y_message']    
     
-   
+@admin.register(Comment)
+class CommentAdmin(admin.ModelAdmin):
+    list_display=['name','email','project','created','active']
+     

@@ -15,7 +15,28 @@
     {{project.body|linebreaks}}
     {% comment %} end of body {% endcomment %}
     
-  
+    {% comment %} comment section {% endcomment %}
+    {% with comments.count as total_comments %}
+    <h2>
+      {{total_comments }} comment {{total_comments|pluralize}}
+    </h2>
+    {% endwith %}
+    {% comment %} comment count section {% endcomment %}
+    
+    {% comment %} active comment section {% endcomment %}
+    {% for comment in comments %}
+      <div class="comment">
+        <p class="info">
+          Comment {{forloop.counter}} by {{comment.name}}
+          {{comment.created }}
+        </p>
+        {{comment.body|linebreaks}}
+      </div>
+    {% empty %}
+       <p>There are no comments. </p>  
+    {% endfor %}
+    {% comment %} active comment ends {% endcomment %}
+    {% include "myapp/includes/comment_form.html" %}
 </div>
 {% comment %} end parent {% endcomment %}
 {% endblock content %}

@@ -9,9 +9,9 @@
     {% comment %} profile image end {% endcomment %}
     <hr class="border-light">
     <nav class="nav flex-column">
-        <a class="nav-link active" href="{% url 'home' %}">Home</a>
-        <a class="nav-link" href="{% url 'skill' %}">Skills</a>
-        <a class="nav-link" href="{% url 'projects' %}">Projects</a>
-        <a class="nav-link" href="{% url 'contact' %}">Contact Me!</a>
+        <a class="nav-link {{home}}" href="{% url 'home' %}">Home</a>
+        <a class="nav-link {{skill}}" href="{% url 'skill' %}">Skills</a>
+        <a class="nav-link {{proj}}" href="{% url 'projects' %}">Projects</a>
+        <a class="nav-link {{contact}}" href="{% url 'contact' %}">Contact Me!</a>
     </nav>
 </div>
