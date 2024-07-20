@@ -41,10 +41,12 @@ def detail(request,id):
     return render(request,"myapp/detail.html",{'project':project,'comments':comments,'form':form})
  
 
-def download_cv(request,file_id):
+def download_cv(request):
     try:
-        uploadedFile = UploadedFile.objects.get(pk=file_id)
-        with open(uploadedFile.file.path, 'rb') as pdf:
+        # uploadedFile = UploadedFile.objects.get(pk=file_id)
+        # media_url=uploadedFile.uploads.url
+        cv_path = os.path.join(settings.MEDIA_ROOT, 'uploads', 'cv.pdf')
+        with open(cv_path, 'rb') as pdf:
             response = HttpResponse(pdf.read(), content_type='application/pdf')
             response['Content-Disposition'] = 'inline;filename=some_file.pdf'
             return response
